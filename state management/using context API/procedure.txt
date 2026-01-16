@@ -1,0 +1,76 @@
+CONTEXT API – ACTUAL PROCEDURE (STEP BY STEP)
+
+===========================================
+
+STEP 1: Create a Context file
+--------------------------------
+- Create a folder named "context"
+- Inside it, create DataContext.jsx
+- Use createContext() to create context
+- Create a Provider component
+- Store global state inside Provider
+- Pass state and functions through "value"
+
+--------------------------------
+
+STEP 2: Wrap the App with Provider
+--------------------------------
+- Go to main.jsx
+- Import the Provider
+- Wrap <App /> inside Provider
+- This enables global access to context data
+
+--------------------------------
+
+STEP 3: Create Component Hierarchy
+--------------------------------
+- App renders Parent
+- Parent renders Child1
+- Child1 renders Child2
+- Do NOT pass any props
+
+--------------------------------
+
+STEP 4: Consume Context in Child Component
+--------------------------------
+- Go to Child2.jsx
+- Import useContext
+- Import the created Context
+- Call useContext(ContextName)
+- Access required data and functions
+
+--------------------------------
+
+STEP 5: Update Context Data
+--------------------------------
+- Use the setter function from context
+- Update state from Child2
+- Changes automatically reflect wherever context is used
+
+--------------------------------
+
+STEP 6: Verify Flow
+--------------------------------
+- Provider wraps entire app
+- No props drilling
+- Deep child accesses data directly
+- State updates work globally
+
+--------------------------------
+
+FINAL FLOW
+--------------------------------
+
+Context Provider
+      ↓
+     App
+      ↓
+   Parent
+      ↓
+   Child1
+      ↓
+   Child2 (useContext)
+
+===========================================
+END
+===========================================
