@@ -1,0 +1,79 @@
+REDUX TOOLKIT – STEP BY STEP PROCEDURE (ONE FEATURE: CART)
+
+=========================================================
+
+STEP 1: Create Redux folder
+---------------------------
+- Inside src, create a folder named "redux"
+- This folder will contain all Redux-related files
+
+---------------------------------------------------------
+
+STEP 2: Create a Slice for the Feature
+--------------------------------------
+- Inside redux folder, create cartSlice.js
+- Define initial state for cart
+- Create reducers for cart actions (add to cart)
+- Export actions and reducer
+
+---------------------------------------------------------
+
+STEP 3: Create Redux Store
+--------------------------
+- Inside redux folder, create store.js
+- Use configureStore()
+- Register cart reducer in the store
+- Export the store
+
+---------------------------------------------------------
+
+STEP 4: Wrap Application with Provider
+--------------------------------------
+- Go to main.jsx
+- Import Provider from react-redux
+- Import the store
+- Wrap <App /> inside <Provider store={store} />
+- This makes Redux state available to all components
+
+---------------------------------------------------------
+
+STEP 5: Create UI Component to Dispatch Action
+----------------------------------------------
+- Create a page/component (Home)
+- Import useDispatch from react-redux
+- Import cart action from cartSlice
+- Dispatch action when user clicks "Add to Cart"
+
+---------------------------------------------------------
+
+STEP 6: Create UI Component to Read State
+-----------------------------------------
+- Create a Cart component
+- Import useSelector from react-redux
+- Access cart items from Redux store
+- Display cart data in UI
+
+---------------------------------------------------------
+
+STEP 7: Verify Data Flow
+-----------------------
+- Trigger action from UI
+- Reducer updates state
+- Store holds updated data
+- Components using useSelector re-render automatically
+
+---------------------------------------------------------
+
+FINAL FLOW
+----------
+UI Action
+   ↓
+dispatch(action)
+   ↓
+slice reducer
+   ↓
+Redux Store
+   ↓
+UI updates via useSelector
+
+
