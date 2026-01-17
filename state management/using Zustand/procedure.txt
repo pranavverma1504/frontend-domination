@@ -1,0 +1,65 @@
+ZUSTAND – STEP BY STEP PROCEDURE (ONE FEATURE: CART)
+
+===================================================
+
+STEP 1: Create Store Folder
+---------------------------
+- Inside src, create a folder named "store"
+- This folder will contain Zustand stores
+
+---------------------------------------------------
+
+STEP 2: Create Cart Store
+-------------------------
+- Inside store folder, create cartStore.js
+- Define global cart state (items)
+- Define functions to update cart state (addToCart)
+- Export the store hook
+
+---------------------------------------------------
+
+STEP 3: Set Up App Entry
+------------------------
+- Go to main.jsx
+- Render <App /> normally
+- Do NOT wrap app with any Provider
+- Zustand does not require Provider
+
+---------------------------------------------------
+
+STEP 4: Create UI to Update State
+---------------------------------
+- Create Home page/component
+- Import cart store hook
+- Access addToCart function from store
+- Call addToCart when user clicks button
+
+---------------------------------------------------
+
+STEP 5: Create UI to Read State
+-------------------------------
+- Create Cart component
+- Import cart store hook
+- Read cart items from store
+- Display items in UI
+
+---------------------------------------------------
+
+STEP 6: Verify State Sharing
+----------------------------
+- Add item from Home component
+- Cart component updates automatically
+- No props passing between components
+
+---------------------------------------------------
+
+FINAL FLOW
+----------
+UI Event
+   ↓
+Zustand Store Function
+   ↓
+Global State Update
+   ↓
+Components Re-render Automatically
+
